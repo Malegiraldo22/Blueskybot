@@ -1,0 +1,7 @@
+python-dotenv
+google-generativeai
+APScheduler
+google-auth
+google-auth-oauthlib
+gspread
+atproto
