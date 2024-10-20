@@ -18,12 +18,10 @@ client = Client()
 profile = client.login(os.getenv('BS_USER'), os.getenv('BS_PASSWORD'))
 
 #Gemini Generator Auth
-print(os.getenv('GOOGLE_AI_KEY'))
 genai.configure(api_key=os.getenv('GEN_AI_KEY'))
 generator = genai.GenerativeModel('gemini-1.5-pro')
 #Gemini Evaluator Auth
 genai.configure(api_key=os.getenv('GEN_AI_KEY_EVA'))
-print(os.getenv('GOOGLE_AI_KEY_EVA'))
 evaluator = genai.GenerativeModel('gemini-1.5-pro')
 
 #Google Sheets
@@ -157,7 +155,6 @@ def create_and_publish_tweet(theme, emotion, max_retries=5):
             else:
                 response = client.send_post(text=tweet)
                 log_to_sheet(posted_sheet, tweet)
-                print("Response code: {}".format(response.status_code))
                 print("Tweet posted: ", tweet)
                 break
         except Exception as e:
