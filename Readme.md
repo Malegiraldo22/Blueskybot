@@ -4,7 +4,8 @@ This project is a Python-based tweet generator that uses the Gemini AI model to 
 
 ## Features
 
--   **AI-Powered Tweet Generation:** Uses the Gemini AI model to generate tweets based on random themes and voices.
+- **News Search:** Uses DuckDuckGo to get the most recent news about a topic to get context for the tweet.
+-   **AI-Powered Tweet Generation:** Uses the Gemini AI model to generate tweets based on random themes, voices and news.
 -   **Tweet Review:** Evaluates generated tweets for quality, authenticity, and structure before posting.
 -   **Automatic Posting:** Publishes tweets directly to Bluesky using the API.
 -   **Google Sheets Integration:** Logs successful posts, rejected tweets, long tweets, and errors to Google Sheets for monitoring and control.
@@ -55,7 +56,7 @@ To run the tweet generator:
 python bot.py
 ```
 
-This will start the scheduler, which posts a tweet every hour based on a random theme and voice, logging all actions into the configured Google Sheets.
+This will start the scheduler, which posts a tweet every hour based on a random theme, news related to the topic and voice, logging all actions into the configured Google Sheets.
 
 ## Configuration
 
